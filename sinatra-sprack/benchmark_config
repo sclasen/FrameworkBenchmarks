@@ -1,0 +1,13 @@
+{
+  "framework": "sinatra-spray",
+  "tests": [{
+    "jruby": {
+      "setup_file": "setup_jruby",
+      "json_url": "/json",
+      "db_url": "/db",
+      "query_url": "/db?queries=",
+      "port": 8080,
+      "sort": 20
+    }
+  }]
+}
