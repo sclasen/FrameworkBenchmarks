@@ -7,7 +7,7 @@ def start(args):
 
   try:
     subprocess.check_call("rvm jruby-1.7.4 do bundle install --gemfile=Gemfile", shell=True, cwd="sprack")
-    subprocess.check_call("rvm jruby-1.7.4 do JAVA_OPTS='-Xmx5g -Xmn3g -Djruby.compile.invokedynamic=true -XX:+UseParallelOldGC' bundle exec sprack", shell=True)
+    subprocess.check_call("rvm jruby-1.7.4 do ./start", shell=True)
     return 0
   except subprocess.CalledProcessError:
     return 1

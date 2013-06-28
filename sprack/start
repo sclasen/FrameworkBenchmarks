@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+export JAVA_OPTS='-Xmx5g -Xmn3g -Djruby.compile.invokedynamic=true -XX:+UseParallelOldGC'
+
+bundle exec sprack -p 8080
