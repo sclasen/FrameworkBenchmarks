@@ -1,10 +1,10 @@
 require "sinatra"
-require "sinatra/json"
+require "jrjackson"
 
 set :logging, false
 
 
 get '/json' do
-  json :message => 'Hello World!'
+  [200, {'Content-Type' => 'application/json'}, JrJackson::Json.dump({:message => 'Hello World!'})]
 end
 
